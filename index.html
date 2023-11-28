@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>EOQ</title>
+</head>
+<body>
+   
+    
+
+<div class="One">
+        
+        <h1 class="one_1">MODELO DE INVENTARIO (EOQ)</h1>
+        <div class="Des">
+            
+            <p class="contenido">
+               El modelo EOQ (Cantidad Económica de Pedido) calcula la cantidad óptima de inventario
+               que una empresa debe pedir para minimizar los costos de almacenamiento y de realizar pedidos.
+               Al encontrar el equilibrio entre la demanda, los costos de ordenar y los costos de mantener el inventario,
+               optimiza la eficiencia de la gestión de existencias.
+           </p>
+        </div> 
+    <div class="container">
+        <h1>EOQ Calculator</h1>
+        <form id="eoqForm">
+            <label for="demand">Tasa De Demanda (D):</label>
+            <input type="number" id="demand" required>
+
+            <label for="setupCost">Costo De Configuración (S):</label>
+            <input type="number" id="setupCost" required>
+
+            <label for="holdingCost">Costo De Mantenimiento (H):</label>
+            <input type="number" id="holdingCost" required>
+
+            <label for="unitCost">Costo Unitario:</label>
+            <input type="number" id="unitCost" required>
+
+            <button type="button" onclick="calculateEOQ()">Calculate</button>
+        </form> 
+    </div>
+
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="results">
+                <!-- Results will be displayed here -->
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+    <script src="js/script.js"></script>
+</body>
+</html>
