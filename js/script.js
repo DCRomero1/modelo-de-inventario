@@ -8,8 +8,9 @@ function calculateEOQ() {
     const Imax = EOQ;
     const averageInventory = EOQ / 2;
     const ordersPerPeriod = demand / EOQ;
+    const ordenar = (demand/EOQ)*setupCost;
     const annualHoldingCost = (EOQ / 2) * holdingCost;
-    const totalInventoryCost = annualHoldingCost + setupCost;
+    const totalInventoryCost = annualHoldingCost + ordenar;
     const unitCosts = unitCost * demand;
     const totalCost = totalInventoryCost + unitCosts;
 
@@ -23,6 +24,7 @@ function calculateEOQ() {
             <li>Nivel Máximo de Inventario(Imax): <span>${Imax.toFixed(2)}</span></li>
             <li>Inventario Promedio: <span>${averageInventory.toFixed(2)}</span></li>
             <li>Pedidos Por Periodo (year): <span>${ordersPerPeriod.toFixed(2)}</span></li>
+            <li>Costo Anual De Ordenar (year): <span>${ordenar.toFixed(2)}</span></li>
             <li>Costo Anual De Mantenimiento: <span>${annualHoldingCost.toFixed(2)}</span></li>
             <li>Costo Total De Inventario (Holding + setup): <span>${totalInventoryCost.toFixed(2)}</span></li>
             <li>Costo Por Unidad(PD): <span>${unitCosts.toFixed(2)}</span></li>
